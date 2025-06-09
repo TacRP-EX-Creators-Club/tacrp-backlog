@@ -1,0 +1,23 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/tacint_shark/wildey/stake_d"
+	"$bumpmap" "models/tacint_shark/wildey/stake_n"
+	"$color2" "[0.35 0.35 0.35]"
+	"$nocull" "1"
+   	"$halflambert" "1"
+	"$nodecal" "1"	
+
+	"$phong" "1"
+	"$phongboost" "6"
+	//"$phongexponent" "10"
+	"$phongfresnelranges"	"[1 3 4]"
+	"$phongexponenttexture" "models/tacint_shark/wildey/stake_e"
+	
+	"$envmap" 					 "env_cubemap"
+	"$normalmapalphaenvmapmask" "1"
+	"$envmaptint" "[0.1 0.1 0.1]"		
+	//"$phongtint" 			"[2 1.5 0.2]"			
+	"$PhongAlbedoTint" "1"		
+	
+	"$surfaceprop" "metal"
+}
