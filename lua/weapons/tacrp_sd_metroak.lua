@@ -5,12 +5,20 @@ AddCSLuaFile()
 
 // names and stuff
 SWEP.PrintName = "AK-2012"
-SWEP.Category = "Tactical RP" // "Tactical RP (Arctic)"
+SWEP.Category = "Tactical RP (Bonus)" // "Tactical RP (Arctic)"
 
-SWEP.SubCatTier = "2Operator"
+SWEP.SubCatTier = "0Exotic"
 SWEP.SubCatType = "4Assault Rifle"
 
 SWEP.Description = "A bizarre prototype AK with cues taken from the P90, found in the metro tunnels of Moscow.  It's operation is a bit of a mystery because it lacks a charging handle."
+
+SWEP.Trivia_Caliber = "5.45x39mm"
+SWEP.Trivia_Manufacturer = "Kalashnikov Concern"
+SWEP.Trivia_Year = "2012"
+
+SWEP.Faction = TacRP.FACTION_COALITION
+SWEP.Credits = [[Assets: 4A Games
+]]
 
 SWEP.ViewModel = "models/weapons/tacint_shark/v_metro_ak.mdl"
 SWEP.WorldModel = "models/weapons/tacint/w_p90.mdl"
