@@ -184,7 +184,7 @@ SWEP.ReloadTimeMult = 1.35
 // sounds
 
 local path = "tacrp/weapons/p90/"
-local path1 = "tacint_shark/weapons/metroak/metro_"
+local path1 = "weapons/tacint_shark/metroak/metro_"
 
 SWEP.Sound_Shoot = "^" .. path1 .. "fire-1.wav"
 SWEP.Sound_Shoot_Silenced = path .. "fire_silenced-1.wav"
