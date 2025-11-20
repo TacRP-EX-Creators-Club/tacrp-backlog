@@ -10,12 +10,12 @@ SWEP.Category = "Tactical RP"
 SWEP.SubCatTier = "3Security"
 SWEP.SubCatType = "3Submachine Gun"
 
-SWEP.Description = "A submachine gun derrived from the venerable AK. Low rate of fire for easy control but middling performance all around."
+SWEP.Description = "A submachine gun derived from the venerable AK. Balanced performance with an edge at close range."
 SWEP.Description_Quote = "\"On the battlefield, it's probably better to wound a man than to kill him.\"" -- 'The History of the AK-74' by S1apSh0es - https://youtu.be/6jZOzB3oeSs?feature=shared
 
-SWEP.Trivia_Caliber = "5.45x39mm"
+SWEP.Trivia_Caliber = "9x19mm"
 SWEP.Trivia_Manufacturer = "Kalashnikov Concern"
-SWEP.Trivia_Year = "1974"
+SWEP.Trivia_Year = "2004"
 
 SWEP.Faction = TacRP.FACTION_MILITIA
 SWEP.Credits = [[
@@ -30,66 +30,60 @@ SWEP.Slot = 2
 
 SWEP.BalanceStats = {
     [TacRP.BALANCE_SBOX] = {
-        Damage_Max = 23,
-        Damage_Min = 15,
+        Damage_Max = 20,
+        Damage_Min = 10,
 
-        RecoilKick = 2.5,
+        Range_Min = 1200,
+        Range_Max = 3500,
+
+        HipFireSpreadPenalty = 0.025,
+
+        RecoilKick = 3.5,
     },
     [TacRP.BALANCE_TTT] = {
-        Damage_Max = 16,
-        Damage_Min = 11,
+        Damage_Max = 14,
+        Damage_Min = 9,
 
-        Range_Min = 400,
-        Range_Max = 2500,
-
-        RPM = 600,
-
-        RecoilSpreadPenalty = 0.0025,
+        RecoilSpreadPenalty = 0.0015,
+        HipFireSpreadPenalty = 0.03,
+        RecoilMaximum = 12,
 
         BodyDamageMultipliers = {
-            [HITGROUP_HEAD] = 2.5,
-            [HITGROUP_CHEST] = 1.25,
+            [HITGROUP_HEAD] = 2,
+            [HITGROUP_CHEST] = 1,
             [HITGROUP_STOMACH] = 1,
-            [HITGROUP_LEFTARM] = 0.9,
-            [HITGROUP_RIGHTARM] = 0.9,
+            [HITGROUP_LEFTARM] = 1,
+            [HITGROUP_RIGHTARM] = 1,
             [HITGROUP_LEFTLEG] = 0.75,
             [HITGROUP_RIGHTLEG] = 0.75,
             [HITGROUP_GEAR] = 0.9
         },
     },
-    [TacRP.BALANCE_PVE] = {
-        Damage_Max = 8,
-        Damage_Min = 4,
-    },
-    [TacRP.BALANCE_OLDSCHOOL] = {
-        RecoilMaximum = 20,
-        RecoilSpreadPenalty = 0.003,
-    }
 }
 
-SWEP.TTTReplace = TacRP.TTTReplacePreset.AssaultRifle
+SWEP.TTTReplace = TacRP.TTTReplacePreset.SMG
 
 // "ballistics"
 
-SWEP.Damage_Max = 22
-SWEP.Damage_Min = 12
-SWEP.Range_Min = 1000
-SWEP.Range_Max = 2700
-SWEP.Penetration = 7 // units of metal this weapon can penetrate
+SWEP.Damage_Max = 18
+SWEP.Damage_Min = 8
+SWEP.Range_Min = 600
+SWEP.Range_Max = 2000
+SWEP.Penetration = 6 // units of metal this weapon can penetrate
 SWEP.ArmorPenetration = 0.7
 
 SWEP.BodyDamageMultipliers = {
-    [HITGROUP_HEAD] = 5,
+    [HITGROUP_HEAD] = 3,
     [HITGROUP_CHEST] = 1,
     [HITGROUP_STOMACH] = 1.25,
     [HITGROUP_LEFTARM] = 1,
     [HITGROUP_RIGHTARM] = 1,
-    [HITGROUP_LEFTLEG] = 0.85,
-    [HITGROUP_RIGHTLEG] = 0.85,
+    [HITGROUP_LEFTLEG] = 0.9,
+    [HITGROUP_RIGHTLEG] = 0.9,
     [HITGROUP_GEAR] = 0.9
 }
 
-SWEP.MuzzleVelocity = 21000
+SWEP.MuzzleVelocity = 12000
 
 // misc. shooting
 
@@ -98,43 +92,44 @@ SWEP.Firemodes = {
     1
 }
 
-SWEP.RPM = 550
+SWEP.RPM = 800
 
-SWEP.Spread = 0.004
+SWEP.Spread = 0.007
 
 SWEP.ShootTimeMult = 0.5
 
 SWEP.RecoilResetInstant = false
 SWEP.RecoilPerShot = 1
-SWEP.RecoilMaximum = 10
+SWEP.RecoilMaximum = 12
 SWEP.RecoilResetTime = 0
-SWEP.RecoilDissipationRate = 36
+SWEP.RecoilDissipationRate = 40
 SWEP.RecoilFirstShotMult = 1
 
-SWEP.RecoilVisualKick = 1
-
-SWEP.RecoilKick = 3
+SWEP.RecoilVisualKick = 0.75
+SWEP.RecoilKick = 3.5
 SWEP.RecoilStability = 0.35
 SWEP.RecoilAltMultiplier = 150
 
 SWEP.RecoilSpreadPenalty = 0.002
-SWEP.HipFireSpreadPenalty = 0.05
+SWEP.HipFireSpreadPenalty = 0.027
 
 SWEP.CanBlindFire = true
 
 // handling
 
-SWEP.MoveSpeedMult = 0.9
-SWEP.ShootingSpeedMult = 0.75
-SWEP.SightedSpeedMult = 0.6
+SWEP.MoveSpeedMult = 0.94
+SWEP.ShootingSpeedMult = 0.85
+SWEP.SightedSpeedMult = 0.7
 
 SWEP.ReloadSpeedMult = 0.5
 
-SWEP.AimDownSightsTime = 0.4
-SWEP.SprintToFireTime = 0.4
+SWEP.AimDownSightsTime = 0.33
+SWEP.SprintToFireTime = 0.33
 
-SWEP.Sway = 1.25
-SWEP.ScopedSway = 0.15
+SWEP.Sway = 0.75
+SWEP.ScopedSway = 0.25
+
+SWEP.FreeAimMaxAngle = 4
 
 // hold types
 
@@ -169,14 +164,12 @@ SWEP.HolsterAng = Angle(0, 0, 0)
 SWEP.ClipSize = 32
 SWEP.Ammo = "pistol"
 
-SWEP.ReloadTimeMult = 1
+SWEP.ReloadTimeMult = 0.9
 SWEP.DropMagazineModel = "models/weapons/tacint/magazines/mp5.mdl"
 SWEP.DropMagazineImpact = "plastic"
 
 SWEP.ReloadUpInTime = 1.65
 SWEP.DropMagazineTime = 0.65
-
-SWEP.FreeAimMaxAngle = 5
 
 // sounds
 
@@ -311,7 +304,7 @@ SWEP.Attachments = {
     },
     [4] = {
         PrintName = "Accessory",
-        Category = {"acc", "acc_ak74", "acc_sling", "acc_duffle", "perk_extendedmag"},
+        Category = {"acc", "acc_sling", "acc_duffle", "acc_extmag_smg"},
         AttachSound = "tacrp/weapons/flashlight_on.wav",
         DetachSound = "tacrp/weapons/flashlight_off.wav",
     },
@@ -329,7 +322,7 @@ SWEP.Attachments = {
     },
     [7] = {
         PrintName = "Ammo",
-        Category = {"ammo_rifle"},
+        Category = {"ammo_pistol"},
         AttachSound = "TacRP/weapons/flashlight_on.wav",
         DetachSound = "TacRP/weapons/flashlight_off.wav",
     },

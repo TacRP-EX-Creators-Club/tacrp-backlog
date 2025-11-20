@@ -11,7 +11,7 @@ SWEP.Category = "Tactical RP"
 SWEP.SubCatTier = "3Security"
 SWEP.SubCatType = "2Magnum Pistol"
 
-SWEP.Description = "An oversized M1911 chambered for a magnum cartridge and designed for big game hunting. Better control than other magnums but not as lethal."
+SWEP.Description = "Oversized M1911 derivative designed for big game hunting. Fast firing, but control and accuracy suffers."
 SWEP.Description_Quote = ""
 
 SWEP.Trivia_Caliber = ".45 Winchester Magnum"
@@ -69,29 +69,25 @@ SWEP.BalanceStats = {
             [HITGROUP_RIGHTLEG] = 0.75,
             [HITGROUP_GEAR] = 0.9
         },
-    },
-    [TacRP.BALANCE_PVE] = {
-        Damage_Max = 12,
-        Damage_Min = 7,
-    },
+    }
 }
 
 SWEP.TTTReplace = TacRP.TTTReplacePreset.Pistol
 
 // "ballistics"
 
-SWEP.Damage_Max = 65
-SWEP.Damage_Min = 42
-SWEP.Range_Min = 350
-SWEP.Range_Max = 1750
-SWEP.Penetration = 2 // units of metal this weapon can penetrate
-SWEP.ArmorPenetration = 0.5
-SWEP.ArmorBonus = 1
+SWEP.Damage_Max = 36
+SWEP.Damage_Min = 24
+SWEP.Range_Min = 900
+SWEP.Range_Max = 2800
+SWEP.Penetration = 11
+SWEP.ArmorPenetration = 0.8
+SWEP.ArmorBonus = 1.5
 
 SWEP.MuzzleVelocity = 17500
 
 SWEP.BodyDamageMultipliers = {
-    [HITGROUP_HEAD] = 3,
+    [HITGROUP_HEAD] = 2.5,
     [HITGROUP_CHEST] = 1,
     [HITGROUP_STOMACH] = 1,
     [HITGROUP_LEFTARM] = 0.75,
@@ -104,44 +100,43 @@ SWEP.BodyDamageMultipliers = {
 // misc. shooting
 
 SWEP.Firemode = 1
-SWEP.RunawayBurst = true
 
-SWEP.RPM = 225
-SWEP.RPMMultBurst = 1.5
-SWEP.PostBurstDelay = 0.3
+SWEP.RPM = 280
+SWEP.RPMMultSemi = 0.85
 
-SWEP.Spread = 0.0025
+SWEP.Spread = 0.0045
 
 SWEP.RecoilPerShot = 1
-SWEP.RecoilMaximum = 10
+SWEP.RecoilMaximum = 4
 SWEP.RecoilResetTime = 0.3
-SWEP.RecoilDissipationRate = 12
+SWEP.RecoilDissipationRate = 4
 SWEP.RecoilFirstShotMult = 0.8
 
-SWEP.RecoilVisualKick = 6
-SWEP.RecoilKick = 14
-SWEP.RecoilStability = 0.4
+SWEP.RecoilVisualKick = 3
+SWEP.RecoilKick = 12
+SWEP.RecoilStability = 0.65
 
-SWEP.RecoilSpreadPenalty = 0.005
-SWEP.HipFireSpreadPenalty = 0.024
+SWEP.RecoilSpreadPenalty = 0.01
+SWEP.HipFireSpreadPenalty = 0.03
+SWEP.PeekPenaltyFraction = 0.2
 
 SWEP.CanBlindFire = true
 
 // handling
 
-SWEP.MoveSpeedMult = 0.975
-SWEP.ShootingSpeedMult = 0.9
+SWEP.MoveSpeedMult = 0.925
+SWEP.ShootingSpeedMult = 0.75
 SWEP.SightedSpeedMult = 0.8
 
 SWEP.ReloadSpeedMult = 0.75
 
-SWEP.AimDownSightsTime = 0.25
+SWEP.AimDownSightsTime = 0.27
 SWEP.SprintToFireTime = 0.25
 
 SWEP.Sway = 1
 SWEP.ScopedSway = 0.5
 
-SWEP.FreeAimMaxAngle = 2.5
+SWEP.FreeAimMaxAngle = 3.5
 
 // hold types
 
@@ -291,8 +286,8 @@ SWEP.Attachments = {
         Ang_VM = Angle(0, -90, 0),
         Pos_WM = Vector(0, -1, -0.8),
         Ang_WM = Angle(0, -90, 0),
-    },   
-	[2] = {
+    },
+    [2] = {
         PrintName = "Muzzle",
         Category = {"barrel", "comp_grizzly"},
         Bone = "slide",
@@ -311,7 +306,7 @@ SWEP.Attachments = {
         Category = {"tactical", "tactical_zoom", "tactical_ebullet"},
         Bone = "sphinx_ROOT",
         WMBone = "Box01",
-		InstalledElements = {"tactical"},
+        InstalledElements = {"tactical"},
         AttachSound = "tacrp/weapons/flashlight_on.wav",
         DetachSound = "tacrp/weapons/flashlight_off.wav",
         VMScale = 0.9,
@@ -335,7 +330,7 @@ SWEP.Attachments = {
     },
     [6] = {
         PrintName = "Trigger",
-        Category = {"trigger_burst"},
+        Category = "trigger_semi",
         AttachSound = "TacRP/weapons/flashlight_on.wav",
         DetachSound = "TacRP/weapons/flashlight_off.wav",
     },
