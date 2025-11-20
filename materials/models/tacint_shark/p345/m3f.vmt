@@ -1,0 +1,6 @@
+"VertexLitGeneric"
+{
+"$basetexture" "models\tacint_shark\p345\m3f"
+"$nocull" "1"
+"$halflambert" "1"
+}

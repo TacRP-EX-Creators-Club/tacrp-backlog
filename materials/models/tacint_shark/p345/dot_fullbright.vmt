@@ -1,0 +1,8 @@
+"VertexLitGeneric"
+{
+"$basetexture" "models\tacint_shark\p345\dot_fullbright"
+"$model" "1"
+"$selfillum" "1"
+"$nocull" "1"
+"$additive" "1"
+}
