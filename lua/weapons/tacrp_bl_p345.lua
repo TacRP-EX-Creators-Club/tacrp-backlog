@@ -8,10 +8,10 @@ SWEP.PrintName = "Ruger P345"
 SWEP.AbbrevName = "P250"
 SWEP.Category = "Tactical RP"
 
-SWEP.SubCatTier = "3Security"
+SWEP.SubCatTier = "2Operator"
 SWEP.SubCatType = "1Pistol"
 
-SWEP.Description = "Lightweight high-caliber pistol with well-rounded performance."
+SWEP.Description = "Accurate high-caliber pistol made to appeal to both civilian and police markets."
 SWEP.Description_Quote = "\"I need a gun.\" \"You got a gun!\"" -- Cry of Fear (2013)
 
 SWEP.Trivia_Caliber = ".45 ACP"
@@ -28,43 +28,27 @@ SWEP.Slot = 1
 
 SWEP.BalanceStats = {
     [TacRP.BALANCE_SBOX] = {
-        Damage_Max = 32,
-        Damage_Min = 20,
-        Range_Min = 900,
-        Range_Max = 2800,
-        ArmorPenetration = 0.65,
-
-        BodyDamageMultipliers = {
-            [HITGROUP_HEAD] = 3.25,
-            [HITGROUP_CHEST] = 1,
-            [HITGROUP_STOMACH] = 1,
-            [HITGROUP_LEFTARM] = 1,
-            [HITGROUP_RIGHTARM] = 1,
-            [HITGROUP_LEFTLEG] = 0.75,
-            [HITGROUP_RIGHTLEG] = 0.75,
-            [HITGROUP_GEAR] = 0.9
-        },
     },
     [TacRP.BALANCE_TTT] = {
-        Description = "Powerful handgun that exchanges fire rate for damage and precision.",
-
-        Damage_Max = 22,
-        Damage_Min = 12,
-        Range_Min = 800,
-        Range_Max = 2000,
+        Damage_Max = 30,
+        Damage_Min = 10,
+        Range_Min = 400,
+        Range_Max = 1800,
         RPM = 200,
         RPMMultSemi = 1,
 
+        Spread = 0.007,
+
         RecoilResetInstant = true,
-        RecoilMaximum = 5,
-        RecoilResetTime = 0.2,
-        RecoilDissipationRate = 5.5,
-        RecoilFirstShotMult = 0.8,
-        RecoilSpreadPenalty = 0.012,
+        RecoilMaximum = 3.5,
+        RecoilResetTime = 0.24,
+        RecoilDissipationRate = 6,
+        RecoilFirstShotMult = 1,
+        RecoilSpreadPenalty = 0.008,
 
         BodyDamageMultipliers = {
             [HITGROUP_HEAD] = 2.5,
-            [HITGROUP_CHEST] = 1,
+            [HITGROUP_CHEST] = 1.25,
             [HITGROUP_STOMACH] = 1,
             [HITGROUP_LEFTARM] = 0.9,
             [HITGROUP_RIGHTARM] = 0.9,
@@ -73,31 +57,24 @@ SWEP.BalanceStats = {
             [HITGROUP_GEAR] = 0.9
         },
     },
-    [TacRP.BALANCE_PVE] = {
-        Damage_Max = 18,
-        Damage_Min = 12,
-        Range_Min = 900,
-        Range_Max = 2800,
-        RPM = 450,
-    },
 }
 
 SWEP.TTTReplace = TacRP.TTTReplacePreset.Pistol
 
 // "ballistics"
 
-SWEP.Damage_Max = 28
-SWEP.Damage_Min = 15
+SWEP.Damage_Max = 34
+SWEP.Damage_Min = 9
 SWEP.Range_Min = 800 // distance for which to maintain maximum damage
-SWEP.Range_Max = 2500 // distance at which we drop to minimum damage
+SWEP.Range_Max = 2200 // distance at which we drop to minimum damage
 SWEP.Penetration = 7 // units of metal this weapon can penetrate
-SWEP.ArmorPenetration = 0.775
-SWEP.ArmorBonus = 1
+SWEP.ArmorPenetration = 0.55
+SWEP.ArmorBonus = 0.5
 
 SWEP.MuzzleVelocity = 11000
 
 SWEP.BodyDamageMultipliers = {
-    [HITGROUP_HEAD] = 4.5,
+    [HITGROUP_HEAD] = 3,
     [HITGROUP_CHEST] = 1,
     [HITGROUP_STOMACH] = 1,
     [HITGROUP_LEFTARM] = 1,
@@ -114,30 +91,31 @@ SWEP.Firemode = 1
 SWEP.RPM = 400
 SWEP.RPMMultSemi = 0.7
 
-SWEP.Spread = 0.004
+SWEP.Spread = 0.0025
+SWEP.RecoilSpreadPenalty = 0.0065
+SWEP.HipFireSpreadPenalty = 0.01
 
 SWEP.ShootTimeMult = 0.5
 
 SWEP.RecoilResetInstant = false
 SWEP.RecoilPerShot = 1
-SWEP.RecoilMaximum = 3
+SWEP.RecoilMaximum = 4
 SWEP.RecoilResetTime = 0.02
-SWEP.RecoilDissipationRate = 12
+SWEP.RecoilDissipationRate = 18
 SWEP.RecoilFirstShotMult = 1
 
-SWEP.RecoilVisualKick = 1.5
-SWEP.RecoilKick = 5
+SWEP.RecoilVisualKick = 2
+SWEP.RecoilKick = 8
 SWEP.RecoilStability = 0.6
 
-SWEP.RecoilSpreadPenalty = 0.0065
 
 SWEP.CanBlindFire = true
 
 // handling
 
 SWEP.MoveSpeedMult = 0.975
-SWEP.ShootingSpeedMult = 0.9
-SWEP.SightedSpeedMult = 0.8
+SWEP.ShootingSpeedMult = 0.8
+SWEP.SightedSpeedMult = 0.85
 
 SWEP.ReloadSpeedMult = 0.75
 
@@ -184,7 +162,7 @@ SWEP.ClipSize = 8
 SWEP.Ammo = "pistol"
 SWEP.Ammo_Expanded = "ti_pistol_heavy"
 
-SWEP.ReloadTimeMult = 1.2
+SWEP.ReloadTimeMult = 1.15
 
 SWEP.DropMagazineModel = "models/weapons/tacint_shark/magazines/p345.mdl"
 SWEP.DropMagazineImpact = "pistol"

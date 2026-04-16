@@ -11,7 +11,7 @@ SWEP.Category = "Tactical RP"
 SWEP.SubCatTier = "2Operator"
 SWEP.SubCatType = "3Machine Pistol"
 
-SWEP.Description = "Japanese machine pistol with an absurd rate of fire.\nOne-handing it isnt advisable but is pretty cool."
+SWEP.Description = "Japanese machine pistol with an absurd rate of fire, modified with burst-fire capabilities.\nOne-handing it isnt advisable but is pretty cool."
 SWEP.Description_Quote = ""
 
 SWEP.Trivia_Caliber = "9x19mm"
@@ -59,14 +59,14 @@ SWEP.TTTReplace = TacRP.TTTReplacePreset.Pistol
 
 // "ballistics"
 
-SWEP.Damage_Max = 20
+SWEP.Damage_Max = 24
 SWEP.Damage_Min = 6
 SWEP.Range_Min = 500
-SWEP.Range_Max = 1800
+SWEP.Range_Max = 2000
 SWEP.Penetration = 3
-SWEP.ArmorPenetration = 0.55
+SWEP.ArmorPenetration = 0.625
 
-SWEP.MuzzleVelocity = 12000
+SWEP.MuzzleVelocity = 11000
 
 SWEP.BodyDamageMultipliers = {
     [HITGROUP_HEAD] = 1.5,
@@ -81,14 +81,17 @@ SWEP.BodyDamageMultipliers = {
 
 // misc. shooting
 
-SWEP.Firemodes = {2, 1}
+SWEP.Firemodes = {-3, 1}
+SWEP.RunawayBurst = true
+SWEP.PostBurstDelay = 0.11
 
-SWEP.RPM = 1100
+SWEP.RPM = 900
+SWEP.RPMMultBurst = 1200 / 900
 SWEP.RPMMultSemi = 0.7
 
-SWEP.Spread = 0.008
+SWEP.Spread = 0.007
 SWEP.RecoilSpreadPenalty = 0.002
-SWEP.HipFireSpreadPenalty = 0.014
+SWEP.HipFireSpreadPenalty = 0.012
 
 SWEP.ShootTimeMult = 0.5
 
@@ -97,29 +100,28 @@ SWEP.RecoilPerShot = 1
 SWEP.RecoilMaximum = 12
 SWEP.RecoilResetTime = 0
 SWEP.RecoilDissipationRate = 40
-SWEP.RecoilFirstShotMult = 2
+SWEP.RecoilFirstShotMult = 1
 
 SWEP.RecoilVisualKick = 1.15
-SWEP.RecoilKick = 4
-SWEP.RecoilStability = 0.25
-
-SWEP.RecoilSpreadPenalty = 0.002
+SWEP.RecoilKick = 5
+SWEP.RecoilStability = 0.2
+SWEP.RecoilAltMultiplier = 300
 
 SWEP.CanBlindFire = true
 
 // handling
 
 SWEP.MoveSpeedMult = 0.975
-SWEP.ShootingSpeedMult = 0.75
+SWEP.ShootingSpeedMult = 0.85
 SWEP.SightedSpeedMult = 0.8
 
 SWEP.ReloadSpeedMult = 0.6
 
-SWEP.AimDownSightsTime = 0.25
-SWEP.SprintToFireTime = 0.28
+SWEP.AimDownSightsTime = 0.2
+SWEP.SprintToFireTime = 0.18
 
-SWEP.Sway = 1.2
-SWEP.ScopedSway = 0.4
+SWEP.Sway = 1
+SWEP.ScopedSway = 0.5
 
 SWEP.FreeAimMaxAngle = 4
 
@@ -295,7 +297,7 @@ SWEP.Attachments = {
     },
     [6] = {
         PrintName = "Trigger",
-        Category = {"trigger_auto"},
+        Category = {"trigger_burst"},
         AttachSound = "TacRP/weapons/flashlight_on.wav",
         DetachSound = "TacRP/weapons/flashlight_off.wav",
     },

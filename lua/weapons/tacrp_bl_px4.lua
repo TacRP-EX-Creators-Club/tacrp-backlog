@@ -11,7 +11,7 @@ SWEP.Category = "Tactical RP"
 SWEP.SubCatTier = "2Operator"
 SWEP.SubCatType = "1Pistol"
 
-SWEP.Description = "Well-rounded police handgun with decent punch and capacity, but poor range."
+SWEP.Description = "Police handgun with high firerate but low range."
 SWEP.Description_Quote = "\"I couldn't control my actions, oh but god... I was still aware. Forgive me...\"" -- Resident Evil 5 (2009)
 
 SWEP.Trivia_Caliber = ".40 S&W"
@@ -77,18 +77,18 @@ SWEP.TTTReplace = TacRP.TTTReplacePreset.Pistol
 
 // "ballistics"
 
-SWEP.Damage_Max = 28
-SWEP.Damage_Min = 13
-SWEP.Range_Min = 400
-SWEP.Range_Max = 1500
+SWEP.Damage_Max = 24
+SWEP.Damage_Min = 9
+SWEP.Range_Min = 700
+SWEP.Range_Max = 1600
 SWEP.Penetration = 3
-SWEP.ArmorPenetration = 0.55
+SWEP.ArmorPenetration = 0.65
 SWEP.ArmorBonus = 0.5
 
 SWEP.MuzzleVelocity = 11500
 
 SWEP.BodyDamageMultipliers = {
-    [HITGROUP_HEAD] = 5,
+    [HITGROUP_HEAD] = 4,
     [HITGROUP_CHEST] = 1,
     [HITGROUP_STOMACH] = 1,
     [HITGROUP_LEFTARM] = 1,
@@ -102,23 +102,23 @@ SWEP.BodyDamageMultipliers = {
 
 SWEP.Firemode = 1
 
-SWEP.RPM = 450
-SWEP.RPMMultSemi = 0.8
+SWEP.RPM = 550
+SWEP.RPMMultSemi = 0.909
 
 SWEP.Spread = 0.0055
+SWEP.RecoilSpreadPenalty = 0.003
+SWEP.HipFireSpreadPenalty = 0.01
 
 SWEP.RecoilResetInstant = false
 SWEP.RecoilPerShot = 1
-SWEP.RecoilMaximum = 4
+SWEP.RecoilMaximum = 6
 SWEP.RecoilResetTime = 0.02
-SWEP.RecoilDissipationRate = 16
+SWEP.RecoilDissipationRate = 24
 SWEP.RecoilFirstShotMult = 1
 
 SWEP.RecoilVisualKick = 1
-SWEP.RecoilKick = 4
-SWEP.RecoilStability = 0.4
-
-SWEP.RecoilSpreadPenalty = 0.003
+SWEP.RecoilKick = 5
+SWEP.RecoilStability = 0.45
 
 SWEP.CanBlindFire = true
 
@@ -126,11 +126,11 @@ SWEP.CanBlindFire = true
 
 SWEP.MoveSpeedMult = 0.975
 SWEP.ShootingSpeedMult = 0.9
-SWEP.SightedSpeedMult = 0.8
+SWEP.SightedSpeedMult = 0.85
 
 SWEP.ReloadSpeedMult = 0.75
 
-SWEP.AimDownSightsTime = 0.25
+SWEP.AimDownSightsTime = 0.22
 SWEP.SprintToFireTime = 0.25
 
 SWEP.Sway = 1
@@ -179,7 +179,7 @@ SWEP.Ammo_Extended = "ti_pistol_heavy"
 SWEP.ReloadUpInTime = 0.85
 SWEP.DropMagazineTime = 0.2
 
-SWEP.ReloadTimeMult = 1.2
+SWEP.ReloadTimeMult = 1.1
 
 SWEP.DropMagazineModel = "models/weapons/tacint_shark/magazines/px4.mdl"
 SWEP.DropMagazineImpact = "pistol"
